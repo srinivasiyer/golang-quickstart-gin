@@ -23,7 +23,7 @@ jobs:
         env:
           IMAGE_TAG: ${{ github.sha }}
           IMAGE_NAME: gqgin
-          REPO_GROUP: nerdmenot
+          REPO_GROUP: ${{ github.repository_owner }}
         run: |
           docker build \
           -t ghcr.io/$REPO_GROUP/gqgin:v-$IMAGE_TAG \
