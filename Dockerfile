@@ -7,7 +7,7 @@ FROM debian:bookworm-slim
 WORKDIR /root
 COPY --from=0 /app/app ./
 RUN apt-get update \
-    && apt-get install -y --force-yes --no-install-recommends apt-transport-https curl ca-certificates \
+    && apt-get install -y --force-yes --no-install-recommends apt-transport-https curl ca-certificates iputils-ping \
     && apt-get clean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
